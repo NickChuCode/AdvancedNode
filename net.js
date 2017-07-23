@@ -7,14 +7,22 @@ const server = require('net').createServer();
 server.on('connection', socket => {
     //本node文件通过nc来触发connection,打开server的connection
     socket.id = counter++;
-    sockets[socket.id] = socket;
+
     console.log('client connected');
-    socket.write('welcome new client!\n');
+    socket.write('Please type your name:\n');
 
     socket.on('data', data => {
+        //判断用户是否存在，不存在则先新建用户
+        if(!sockets[socket.id]){
+            socket.name = data.toString().trim();
+            socket.write(`Welcome ${socket.name}!\n`);
+            sockets[socket.id] = socket;
+            return;
+        }
         //如果没有指定encode，data会以buffer的形式输出
-        Object.entries(sockets).forEach(([, cs]) => {
-            cs.write(`${socket.id}: `);
+        Object.entries(sockets).forEach(([key, cs]) => {
+            if(socket.id == key) return;
+            cs.write(`${socket.name}: `);
             cs.write(data);
         });
     });
