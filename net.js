@@ -11,6 +11,11 @@ server.on('connection', socket => {
     console.log('client connected');
     socket.write('Please type your name:\n');
 
+    function timeStamp(){
+        const now = new Date();
+        return `${now.getHours()}:${now.getMinutes()}`;
+    }
+
     socket.on('data', data => {
         //判断用户是否存在，不存在则先新建用户
         if(!sockets[socket.id]){
@@ -22,7 +27,7 @@ server.on('connection', socket => {
         //如果没有指定encode，data会以buffer的形式输出
         Object.entries(sockets).forEach(([key, cs]) => {
             if(socket.id == key) return;
-            cs.write(`${socket.name}: `);
+            cs.write(`${socket.name}  ${timeStamp()}: `);
             cs.write(data);
         });
     });
