@@ -16,16 +16,31 @@ server.bind(PORT, HOST);
 //Client
 
 
-//每次send的时候，client都会用不同的port
-setInterval(
-    function () {
-        const client = dgram.createSocket('udp4');
-        client.send('Nick rocks', PORT, HOST, (err) => {
-            if (err) throw err;
-            console.log('UDP message sent');
-            client.close();
-        })
-    }
-    , 1000
-);
+// //每次send的时候，client都会用不同的port
+// setInterval(
+//     function () {
+//         const client = dgram.createSocket('udp4');
+//         client.send('Nick rocks', PORT, HOST, (err) => {
+//             if (err) throw err;
+//             console.log('UDP message sent');
+//             client.close();
+//         })
+//     }
+//     , 1000
+// );
 
+const client = dgram.createSocket('udp4');
+const msg = Buffer.from('Nick rocks');
+
+//send的第一个参数也可以是Buffer，用buffer时，
+//可以指定msg的起止（通过起始位置，偏移量来指定）
+client.send(msg, 0, 4, PORT, HOST, (err) => {
+    if (err) throw err;
+    console.log('UDP message sent');
+
+    client.send(msg, 5, 5, PORT, HOST, (err) => {
+        if(err) throw err;
+        console.log('UPD message sent');
+        client.close();
+    } );
+})
