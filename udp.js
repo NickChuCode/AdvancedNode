@@ -34,6 +34,9 @@ const msg = Buffer.from('Nick rocks');
 
 //send的第一个参数也可以是Buffer，用buffer时，
 //可以指定msg的起止（通过起始位置，偏移量来指定）
+//如果不分，前三个参数可以写成msg, 0, msg.length
+//此外，第一个参数可以是一个Array，如果想一次发多个参数的话
+//client.send([], ...)的形式
 client.send(msg, 0, 4, PORT, HOST, (err) => {
     if (err) throw err;
     console.log('UDP message sent');
