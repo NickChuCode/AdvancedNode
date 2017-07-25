@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+//TODO: some todo test
 const dirname = path.join(__dirname, 'files');
 const currentFiles = fs.readdirSync(dirname);
 
