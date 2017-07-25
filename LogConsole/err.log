@@ -1,0 +1,40 @@
+Error: Whoops
+    at Timeout.setInterval [as _onTimeout] (/Users/zhuyixin/Documents/Books/CodeSchool/AdvancedNode/LogConsole/index.js:10:20)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+Error: Whoops
+    at Timeout.setInterval [as _onTimeout] (/Users/zhuyixin/Documents/Books/CodeSchool/AdvancedNode/LogConsole/index.js:10:20)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+Error: Whoops
+    at Timeout.setInterval [as _onTimeout] (/Users/zhuyixin/Documents/Books/CodeSchool/AdvancedNode/LogConsole/index.js:10:20)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+Error: Whoops
+    at Timeout.setInterval [as _onTimeout] (/Users/zhuyixin/Documents/Books/CodeSchool/AdvancedNode/LogConsole/index.js:10:20)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+Error: Whoops
+    at Timeout.setInterval [as _onTimeout] (/Users/zhuyixin/Documents/Books/CodeSchool/AdvancedNode/LogConsole/index.js:10:20)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+Error: Whoops
+    at Timeout.setInterval [as _onTimeout] (/Users/zhuyixin/Documents/Books/CodeSchool/AdvancedNode/LogConsole/index.js:10:20)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+Error: Whoops
+    at Timeout.setInterval [as _onTimeout] (/Users/zhuyixin/Documents/Books/CodeSchool/AdvancedNode/LogConsole/index.js:10:20)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+Error: Whoops
+    at Timeout.setInterval [as _onTimeout] (/Users/zhuyixin/Documents/Books/CodeSchool/AdvancedNode/LogConsole/index.js:10:20)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
